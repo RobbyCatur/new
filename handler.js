@@ -69,7 +69,7 @@ module.exports = {
           if (!('sBye' in chat)) chat.sBye = ''
           if (!('sPromote' in chat)) chat.sPromote = ''
           if (!('sDemote' in chat)) chat.sDemote = ''
-          if (!('delete' in chat)) chat.delete = true
+          if (!('delete' in chat)) chat.delete = false
           if (!('antiLink' in chat)) chat.antiLink = false
           if (!('antiSticker' in chat)) chat.antiSticker = false
           if (!('getmsg' in chat)) chat.getmsg = false
@@ -83,7 +83,7 @@ module.exports = {
           sBye: '',
           sPromote: '',
           sDemote: '',
-          delete: true,
+          delete: false,
           antiLink: false,
           antiSticker: false,
           getmsg: false,
