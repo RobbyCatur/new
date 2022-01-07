@@ -1,6 +1,7 @@
 const HX = require('hxz-api')
 
 let handler = async (m, { conn, args }) => {
+  m.reply('Proses')
   let me = conn.user.name
   let txt = `
 ${me} Instagram downloader
