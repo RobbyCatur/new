@@ -26,7 +26,7 @@ Jawaban benar ${poin} XP
       await conn.reply(m.chat, caption, m),
       json, poin,
       setTimeout(() => {
-        if (conn.asahotak[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.result.jawaban}*`, '©Robby Catur', 'LANJUT', '.asahotak')
+        if (conn.asahotak[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.result.jawaban}*`, '©Robby Catur', 'LANJUT', '.asahotak', m)
         delete conn.asahotak[id]
       }, timeout)
     ]
