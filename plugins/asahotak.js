@@ -16,7 +16,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
     let caption = `
 *「 Asah Otak 」*
 
-Soal: "${json.result.soal}"
+Soal: "${json.result.pertanyaan}"
 
 Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik *${usedPrefix}aohint* untuk bantuan
