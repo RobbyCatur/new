@@ -9,7 +9,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
         conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', conn.asahotak[id][0])
         throw false
     }
-    let res = await fetch(`https://api.lolhuman.xyz/api/tebak/asahotak?apikey=` + APIKeys)
+    let res = await fetch(`https://api.lolhuman.xyz/api/tebak/asahotak?apikey=c6670fc7e461b7623a8fdf9f`)
     if (res.status !== 200) throw await res.text()
     let json = await res.json()
     if (!json.status) throw json
