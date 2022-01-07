@@ -5,7 +5,7 @@ let handler = async (m, { conn, args }) => {
   let txt = `
 ${me} Instagram downloader
 `.trim()
-  let result = HX.igdl(args[0]).then(res => conn.sendFile(m.chat, res.medias[0].url, '', '', m))
+  let result = HX.igdl(args[0]).then(res => conn.sendFile(m.chat, res.medias[0].url, '', txt, m))
 }
 handler.command = /^tesig$/i
 module.exports = handler
