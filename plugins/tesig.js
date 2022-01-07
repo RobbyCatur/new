@@ -1,19 +1,11 @@
-let fetch = require('node-fetch')
+const HX = require('hxz-api')
 
-let handler = async (m, { conn, args }) => {
-	let me = conn.user.name
-	let res = await fetch(`https://hardianto.xyz/api/instagram?url=` + args[0])
-	let json = await res.json()
-	let url = json.url
-	let isvideo = json.isvideo
-	let txt = `
-	${me} Instagram downloader
-Post Info
-Like : ${json.like}
-Komen : ${json.comment}
-View : ${json.view}
-`
-   conn.sendFile(m.chat, url, 'ig' + (isvideo == 'true' ? '.mp4', '.jpg'), txt.trim(), m)
-   }
-   handler.command = /^ig$/i
+let handler = async (m, { conn }) => {
+  let me = conn.user.name
+  let txt = `
+${me} Instagram downloader
+`.trim()
+  let result = HX.igdl(url).then(res => conn.sendFile(m.chat, res.medias[0].url, '', '',txt, m))
+}
+handler.command = /^tesig$/i
 module.exports = handler
