@@ -9,5 +9,7 @@ ${hasil}
       `.trim()
       conn.reply(m.chat, txt, m)
       }
+      handler.help = ['faktaunik']
+      handler.tags = ['random']
       handler.command = /^(faktaunik)$/i
       module.exports = handler
